@@ -119,6 +119,18 @@ const Car = () => {
     if(index === 0) {
       history.goBack()
     }
+    if(index === 1) {
+      history.push('/nameplate/africanNerd')
+    }
+    if(index === 2) {
+      history.push('/welcome-music/i-feel-it-coming')
+    }
+    if(index === 5) {
+      history.push('/errands/errand-one')
+    }
+    if(index === 6) {
+      history.push('/ride-mode/executive')
+    }
     if(index === 7){
       history.push('/driver/jean')
     }

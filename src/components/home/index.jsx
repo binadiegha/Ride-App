@@ -75,7 +75,7 @@ const Home = () => {
   
   const onMapClick = (area, index) => {
     if(index === 0) {
-      history.push(`/car-music`)
+      // history.push(`/car-music`)
     }
     if(index === 4){
       history.push('/car/Maybach')
@@ -89,7 +89,7 @@ const Home = () => {
 
   const onMapClick1 = (area, index) => {
     if(index === 0) {
-      history.push(`/car-music`)
+      // history.push(`/car-music`)
     }
     if(index === 4){
       history.push('/car/Rolls-royce')
@@ -103,7 +103,7 @@ const Home = () => {
 
   const onMapClick2 = (area, index) => {
     if(index === 0) {
-      history.push(`/car-music`)
+      // history.push(`/car-music`)
     }
     if(index === 4){
       history.push('/car/Range-Rover')
@@ -115,6 +115,19 @@ const Home = () => {
     // alert(tip);
   }
 
+
+  const goToMaybach = () =>{
+    history.push('/car/Maybach')
+  }
+
+  const goToRollsRoyce = () =>{
+    history.push('/car/Rolls-royce')
+  }
+
+  const goToRangeRover = () =>{
+    history.push('/car/Range-Rover')
+  }
+
   // <ImageMap
 	// className="usage-map"
 	// src={Maybach}
@@ -122,9 +135,9 @@ const Home = () => {
 	// onMapClick={onMapClick}
   // />
 
-const ImageMapComponent1 = React.useMemo(() => <ImageMap className="usage-map" src={Maybach} map={mapArea} onMapClick={onMapClick} />, [mapArea, Maybach]);
-const ImageMapComponent2 = React.useMemo(() => <ImageMap className="usage-map" src={RollsRoyce} map={mapArea} onMapClick={onMapClick1} />, [mapArea, RollsRoyce]);
-const ImageMapComponent3 = React.useMemo(() => <ImageMap className="usage-map" src={RangeRover} map={mapArea} onMapClick={onMapClick2} />, [mapArea, RangeRover]);
+const ImageMapComponent1 = React.useMemo(() => <ImageMap onClick = { goToMaybach } className="usage-map" src={Maybach} map={mapArea} onMapClick={onMapClick} />, [mapArea, Maybach]);
+const ImageMapComponent2 = React.useMemo(() => <ImageMap onClick = { goToRollsRoyce } className="usage-map" src={RollsRoyce} map={mapArea} onMapClick={onMapClick1} />, [mapArea, RollsRoyce]);
+const ImageMapComponent3 = React.useMemo(() => <ImageMap onClick = { goToRangeRover } className="usage-map" src={RangeRover} map={mapArea} onMapClick={onMapClick2} />, [mapArea, RangeRover]);
   // const handlers = useSwipeable({
   //   onSwipedLeft: (eventData) => {
   //     console.log('you swipped')
@@ -136,7 +149,7 @@ const ImageMapComponent3 = React.useMemo(() => <ImageMap className="usage-map" s
     <div>
       <Carousel  className="carousel_holder" afterChange={onChange}>
 
-        <div>
+        <div >
           {/* <img className="HomePhoto" src={Maybach} /> */}
           {ImageMapComponent1}
         </div>
