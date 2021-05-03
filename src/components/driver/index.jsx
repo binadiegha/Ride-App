@@ -33,7 +33,7 @@ const Driver = () => {
       "style":{
         "background":"rgba(0, 0, 0, 0.0)",
         "cursor": "pointer",
-        "border-radius":".5rem"
+        "borderRadius":".5rem"
       }
     },
 
@@ -46,7 +46,7 @@ const Driver = () => {
       "style":{
         "background":"rgba(0, 0, 0, 0.0)",
         "cursor": "pointer",
-        "border-radius":".5rem"
+        "borderRadius":".5rem"
       }
     },
 
@@ -59,7 +59,7 @@ const Driver = () => {
       "style":{
         "background":"rgba(0, 0, 0, 0.0)",
         "cursor": "pointer",
-        "border-radius":".5rem"
+        "borderRadius":".5rem"
       }
     }
 
