@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {  useParams, useHistory, Switch } from 'react-router-dom'
+import {  useParams, useHistory } from 'react-router-dom'
 import { ImageMap } from '@qiuz/react-image-map';
 import MaybachSelected from '../../assets/images/car-selected/car-selected-maybach.jpg'
 import RollsRoyceSelected from '../../assets/images/car-selected/car-selected-rr.jpg'
