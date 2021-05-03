@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Home from "./components/home";
+import Car from "./components/car";
+import './App.less';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import CarMusic from './components/carMusic';
+import Driver from './components/driver';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     {/* <Home /> */}
+     <Router>
+
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/car/:id" component={Car}  />
+        <Route path="/car-music" component={CarMusic}  />
+        <Route path="/driver/:id" component={Driver}  />
+      </Switch>
+    </Router>
+
+    </>
+    
   );
 }
 
